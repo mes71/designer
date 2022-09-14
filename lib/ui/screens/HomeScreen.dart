@@ -1,9 +1,11 @@
 import 'package:designer/constants.dart';
+import 'package:designer/ui/screens/ContinueWatchingScreen.dart';
 import 'package:designer/ui/widget/explore_course/ExploreCourse.dart';
 import 'package:designer/ui/widget/home_nav_bar/HomeNavBar.dart';
 import 'package:designer/ui/widget/recent_course/RecentCourseList.dart';
 import 'package:designer/ui/widget/side_menu/Sidebar.dart';
 import 'package:flutter/material.dart';
+import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -87,6 +89,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 const ExploreCourseList()
               ],
             )),
+            ContinueWatchingScreen(),
             IgnorePointer(
               ignoring: sidebarHidden,
               child: Stack(
