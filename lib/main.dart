@@ -1,6 +1,8 @@
-import 'package:designer/ui/widget/side_menu/Sidebar.dart';
-import 'package:designer/ui/widget/side_menu/SidebarItem.dart';
-import 'package:designer/ui/widget/side_menu/SidebarItemModel.dart';
+import 'package:designer/constants.dart';
+import 'package:designer/ui/screens/HomeScreen.dart';
+import 'package:designer/ui/widget/explore_course/ExploreCourse.dart';
+import 'package:designer/ui/widget/home_nav_bar/HomeNavBar.dart';
+import 'package:designer/ui/widget/recent_course/RecentCourseList.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,23 +17,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        body: SideBar(),
-      ),
+      home:HomeScreen()
     );
   }
 }
-
-
